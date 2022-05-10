@@ -37,11 +37,12 @@ $(".btn").on("click", function() {
   var userChosenColor = $(this).attr("id");
   userPattern.push(userChosenColor);
   validate(userPattern.length - 1);
-  Play(userChosenColor);
-  animateClick(userChosenColor);
-  console.log(userPattern);
-
-  
+  if (gameOn) {
+      Play(userChosenColor);
+      animateClick(userChosenColor);
+      console.log(userPattern);
+    }
+ 
 
 });
 
