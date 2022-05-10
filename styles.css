@@ -52,6 +52,18 @@ body {
   background-color: grey;
 }
 
-.blink{
-  text-decoration: blink;
+.spacebar{
+  padding:.5rem;
+  width:20rem;
+  border: 2px solid black;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #FEF2BF;
 }
+
+.pressedBar {
+  box-shadow: 0 0 20px white;
+  background-color: #1a0000;
+  border: 3px solid white;
+  color: white;
+}
+
