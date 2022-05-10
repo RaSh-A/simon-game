@@ -12,6 +12,12 @@ var delay = 100;
 
 // Event Listeners
 
+$("body").click(function(){
+  if(!gameOn){
+    nextSequence();
+    gameOn = true;
+  }
+});
 
 $("body").on("keydown", function(evt) {
 
@@ -47,7 +53,7 @@ function validate(currentLevel) {
 
     }
   } else {
-    $(openingLine).text("Game Over, press Space to restart");
+    $(openingLine).text("Game Over, press anywhere to restart");
 
     $("body").addClass("game-over")
     Play("wrong");
