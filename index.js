@@ -12,8 +12,12 @@ var delay = 100;
 
 // Event Listeners
 
-$("body").click(function(){
+$(".spacebar").click(function(){
   if(!gameOn){
+    $(".spacebar").addClass("pressedBar");
+    setTimeout(function(){
+      $(".spacebar").removeClass("pressedBar");
+    }, 200);
     nextSequence();
     gameOn = true;
   }
@@ -54,7 +58,7 @@ function validate(currentLevel) {
 
     }
   } else {
-    $(openingLine).text("Game Over, press anywhere to restart");
+    $(openingLine).text("Game Over, press spacebar to restart");
 
     $("body").addClass("game-over")
     Play("wrong");
